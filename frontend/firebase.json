@@ -1,0 +1,47 @@
+{
+  "hosting": {
+    "public": "out",
+    "site": "zakiii",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/covid19",
+        "function": "covid19"
+      },
+      {
+        "source": "/w/xml/main-sitemap.xml",
+        "function": "mainSitemap"
+      },
+      {
+        "source": "{,/ar}/Articles/**",
+        "function": "articles"
+      },
+      {
+        "source": "{,/ar}/Books/**",
+        "function": "books"
+      },
+      {
+        "source": "{,/ar}/COVID-19{,/**}",
+        "function": "covid19Page"
+      },
+      {
+        "source": "/ar{,/**}",
+        "destination": "/ar/index.html"
+      },
+      {
+        "source": "!/[a-z][a-z]{,/**}",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": {
+    "predeploy": [
+      "cd \"$RESOURCE_DIR\" && yarn lint",
+      "cd \"$RESOURCE_DIR\" && yarn build"
+    ]
+  }
+}

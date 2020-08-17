@@ -1,0 +1,30 @@
+@import "../../../../../common/style/variables";
+
+.articles {
+  .article {
+    background: #fff;
+    .article-skeleton {
+      margin: 1rem;
+    }
+    .image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .title {
+      font-size: xx-large;
+      display: inline-block;
+    }
+    .edit {
+      vertical-align: super;
+      @if "{|language code|}" == "ar" {
+        float: left;
+      } @else {
+        float: right;
+      }
+    }
+    .description {
+      font-size: small;
+    }
+  }
+}

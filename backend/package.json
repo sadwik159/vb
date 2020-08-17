@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "clear": "rimraf ./out && rimraf ../frontend/functions/data",
+    "dev": "nodemon --exec \"yarn clear && node build.js\"",
+    "build": "yarn clear && NODE_ENV=production node build.js",
+    "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\""
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10",
+    "yarn": "1"
+  },
+  "dependencies": {
+    "firebase-tools": "^7.11.0",
+    "fs-extra": "^8.1.0",
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}

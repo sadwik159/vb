@@ -1,0 +1,17 @@
+{
+  "*": {
+    "default language code": "en",
+    "language english": "English",
+    "language arabic": "العربية"
+  },
+  "en": {
+    "language code": "en",
+    "en": "English",
+    "ar": "Arabic"
+  },
+  "ar": {
+    "language code": "ar",
+    "en": "الإنجليزية",
+    "ar": "العربية"
+  }
+}
